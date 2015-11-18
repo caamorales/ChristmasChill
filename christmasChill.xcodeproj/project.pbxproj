@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		691A662D1BEE760300910E1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A662C1BEE760300910E1B /* AppDelegate.swift */; };
-		691A662F1BEE760300910E1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A662E1BEE760300910E1B /* ViewController.swift */; };
+		691A662F1BEE760300910E1B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A662E1BEE760300910E1B /* MainMenuViewController.swift */; };
 		691A66321BEE760300910E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691A66301BEE760300910E1B /* Main.storyboard */; };
 		691A66341BEE760300910E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691A66331BEE760300910E1B /* Assets.xcassets */; };
 		691A663F1BEE760300910E1B /* christmasChillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A663E1BEE760300910E1B /* christmasChillTests.swift */; };
 		691A664A1BEE760300910E1B /* christmasChillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A66491BEE760300910E1B /* christmasChillUITests.swift */; };
+		698411931BF28529001086D0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698411921BF28529001086D0 /* VideoViewController.swift */; };
+		69D20AE01BFBE47700E2440C /* Beyond Wonderland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */; };
+		69D20AE21BFBE89300E2440C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D20AE11BFBE89300E2440C /* AboutViewController.swift */; };
+		69EC89CA1BF9220B00B7E309 /* VideoAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */; };
+		69EC89CC1BF9318700B7E309 /* snow.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CB1BF9309900B7E309 /* snow.mp4 */; };
+		69EC89CE1BF9346600B7E309 /* fireplace.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */; };
+		69EC89D01BF935F400B7E309 /* snowAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CF1BF935F400B7E309 /* snowAudio.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +42,7 @@
 /* Begin PBXFileReference section */
 		691A66291BEE760300910E1B /* christmasChill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = christmasChill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		691A662C1BEE760300910E1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		691A662E1BEE760300910E1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		691A662E1BEE760300910E1B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		691A66311BEE760300910E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		691A66331BEE760300910E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		691A66351BEE760300910E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +52,13 @@
 		691A66451BEE760300910E1B /* christmasChillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = christmasChillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691A66491BEE760300910E1B /* christmasChillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = christmasChillUITests.swift; sourceTree = "<group>"; };
 		691A664B1BEE760300910E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698411921BF28529001086D0 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beyond Wonderland.ttf"; sourceTree = "<group>"; };
+		69D20AE11BFBE89300E2440C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAudioManager.swift; sourceTree = "<group>"; };
+		69EC89CB1BF9309900B7E309 /* snow.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow.mp4; sourceTree = "<group>"; };
+		69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fireplace.mp4; sourceTree = "<group>"; };
+		69EC89CF1BF935F400B7E309 /* snowAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowAudio.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +110,16 @@
 			isa = PBXGroup;
 			children = (
 				691A662C1BEE760300910E1B /* AppDelegate.swift */,
-				691A662E1BEE760300910E1B /* ViewController.swift */,
+				691A662E1BEE760300910E1B /* MainMenuViewController.swift */,
+				698411921BF28529001086D0 /* VideoViewController.swift */,
 				691A66301BEE760300910E1B /* Main.storyboard */,
+				69EC89C81BF91C5800B7E309 /* audio */,
+				691A66591BEE81DA00910E1B /* video */,
 				691A66331BEE760300910E1B /* Assets.xcassets */,
+				69D20ADE1BFBE46600E2440C /* fonts */,
 				691A66351BEE760300910E1B /* Info.plist */,
+				69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */,
+				69D20AE11BFBE89300E2440C /* AboutViewController.swift */,
 			);
 			path = christmasChill;
 			sourceTree = "<group>";
@@ -120,6 +140,31 @@
 				691A664B1BEE760300910E1B /* Info.plist */,
 			);
 			path = christmasChillUITests;
+			sourceTree = "<group>";
+		};
+		691A66591BEE81DA00910E1B /* video */ = {
+			isa = PBXGroup;
+			children = (
+				69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */,
+				69EC89CB1BF9309900B7E309 /* snow.mp4 */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
+		69D20ADE1BFBE46600E2440C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		69EC89C81BF91C5800B7E309 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				69EC89CF1BF935F400B7E309 /* snowAudio.mp3 */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +235,7 @@
 				TargetAttributes = {
 					691A66281BEE760200910E1B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 3CYLFTT3BH;
 					};
 					691A66391BEE760300910E1B = {
 						CreatedOnToolsVersion = 7.1;
@@ -226,8 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69EC89CE1BF9346600B7E309 /* fireplace.mp4 in Resources */,
+				69EC89CC1BF9318700B7E309 /* snow.mp4 in Resources */,
+				69D20AE01BFBE47700E2440C /* Beyond Wonderland.ttf in Resources */,
 				691A66341BEE760300910E1B /* Assets.xcassets in Resources */,
 				691A66321BEE760300910E1B /* Main.storyboard in Resources */,
+				69EC89D01BF935F400B7E309 /* snowAudio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691A662F1BEE760300910E1B /* ViewController.swift in Sources */,
+				698411931BF28529001086D0 /* VideoViewController.swift in Sources */,
+				691A662F1BEE760300910E1B /* MainMenuViewController.swift in Sources */,
+				69EC89CA1BF9220B00B7E309 /* VideoAudioManager.swift in Sources */,
+				69D20AE21BFBE89300E2440C /* AboutViewController.swift in Sources */,
 				691A662D1BEE760300910E1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,10 +439,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = christmasChill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dazindustries.christmasChill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,10 +454,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = christmasChill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dazindustries.christmasChill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -472,6 +531,7 @@
 				691A66501BEE760300910E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691A66511BEE760300910E1B /* Build configuration list for PBXNativeTarget "christmasChillTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +540,7 @@
 				691A66531BEE760300910E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691A66541BEE760300910E1B /* Build configuration list for PBXNativeTarget "christmasChillUITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +549,7 @@
 				691A66561BEE760300910E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
