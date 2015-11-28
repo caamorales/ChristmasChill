@@ -26,6 +26,9 @@ class VideoAudioManager: NSObject {
             break;
         case "snowVideo":
             videoFileName = "snow"
+            
+        case "candleVideo":
+            videoFileName = "christmasCandles"
         default:
             preconditionFailure("VIDEO NOT FOUND")
         }
@@ -49,6 +52,9 @@ class VideoAudioManager: NSObject {
             break
         case "snowVideo":
             audioFileName = "snowAudio"
+            
+        case "candleVideo":
+            audioFileName = nil
         default:
             preconditionFailure("AUDIO NOT FOUND")
         }

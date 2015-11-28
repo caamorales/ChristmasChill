@@ -13,6 +13,7 @@
 		691A66341BEE760300910E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691A66331BEE760300910E1B /* Assets.xcassets */; };
 		691A663F1BEE760300910E1B /* christmasChillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A663E1BEE760300910E1B /* christmasChillTests.swift */; };
 		691A664A1BEE760300910E1B /* christmasChillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A66491BEE760300910E1B /* christmasChillUITests.swift */; };
+		696DD4F71C0A3E9200DA20DF /* christmasCandles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 696DD4F61C0A3E8B00DA20DF /* christmasCandles.mp4 */; };
 		698411931BF28529001086D0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698411921BF28529001086D0 /* VideoViewController.swift */; };
 		69D20AE01BFBE47700E2440C /* Beyond Wonderland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */; };
 		69D20AE21BFBE89300E2440C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D20AE11BFBE89300E2440C /* AboutViewController.swift */; };
@@ -52,6 +53,7 @@
 		691A66451BEE760300910E1B /* christmasChillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = christmasChillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691A66491BEE760300910E1B /* christmasChillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = christmasChillUITests.swift; sourceTree = "<group>"; };
 		691A664B1BEE760300910E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696DD4F61C0A3E8B00DA20DF /* christmasCandles.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = christmasCandles.mp4; sourceTree = "<group>"; };
 		698411921BF28529001086D0 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beyond Wonderland.ttf"; sourceTree = "<group>"; };
 		69D20AE11BFBE89300E2440C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		691A66591BEE81DA00910E1B /* video */ = {
 			isa = PBXGroup;
 			children = (
+				696DD4F61C0A3E8B00DA20DF /* christmasCandles.mp4 */,
 				69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */,
 				69EC89CB1BF9309900B7E309 /* snow.mp4 */,
 			);
@@ -274,6 +277,7 @@
 			files = (
 				69EC89CE1BF9346600B7E309 /* fireplace.mp4 in Resources */,
 				69EC89CC1BF9318700B7E309 /* snow.mp4 in Resources */,
+				696DD4F71C0A3E9200DA20DF /* christmasCandles.mp4 in Resources */,
 				69D20AE01BFBE47700E2440C /* Beyond Wonderland.ttf in Resources */,
 				691A66341BEE760300910E1B /* Assets.xcassets in Resources */,
 				691A66321BEE760300910E1B /* Main.storyboard in Resources */,

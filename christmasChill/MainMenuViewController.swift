@@ -9,9 +9,11 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
-
+    
+    @IBOutlet var imagePreview: UIImageView!
     @IBOutlet var fireplaceButton: UIButton!
     @IBOutlet var fallingSnowButton: UIButton!
+    @IBOutlet var soothingCandlesButton: UIButton!
     @IBOutlet var aboutButton: UIButton!
     
     override func viewDidLoad() {
@@ -39,62 +41,27 @@ class MainMenuViewController: UIViewController {
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
+        let newImage:UIImage
+        
         if context.nextFocusedView == self.fireplaceButton {
-          self.fireplaceButton.setContentHuggingPriority(249, forAxis:UILayoutConstraintAxis.Horizontal)
-          self.fireplaceButton.setContentCompressionResistancePriority(750, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-          self.fallingSnowButton.setContentHuggingPriority(250, forAxis: UILayoutConstraintAxis.Horizontal)
-          self.fallingSnowButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-          self.aboutButton.setContentHuggingPriority(250, forAxis:UILayoutConstraintAxis.Horizontal)
-          self.aboutButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                self.view.layoutIfNeeded()
-                self.fireplaceButton.titleLabel?.alpha = 0.0
-                self.fallingSnowButton.titleLabel?.alpha = 1.0
-                self.aboutButton.titleLabel?.alpha = 1.0
-            })
+            newImage = UIImage(named: "fireplacePreview")!
         }
-        
+            
         else if context.nextFocusedView == self.fallingSnowButton {
-            self.fallingSnowButton.setContentHuggingPriority(249, forAxis:UILayoutConstraintAxis.Horizontal)
-            self.fallingSnowButton.setContentCompressionResistancePriority(750, forAxis: UILayoutConstraintAxis.Horizontal)
+            newImage = UIImage(named: "snowFallingPreview")!
+        }
             
-            self.fireplaceButton.setContentHuggingPriority(250, forAxis: UILayoutConstraintAxis.Horizontal)
-            self.fireplaceButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
+        else if context.nextFocusedView == self.soothingCandlesButton {
+            newImage = UIImage(named: "soothingCandlesPreview")!
+        }
             
-            self.aboutButton.setContentHuggingPriority(250, forAxis:UILayoutConstraintAxis.Horizontal)
-            self.aboutButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                self.view.layoutIfNeeded()
-                self.fallingSnowButton.titleLabel?.alpha = 0.0
-                self.fireplaceButton.titleLabel?.alpha = 1.0
-                self.aboutButton.titleLabel?.alpha = 1.0
-            })
+        else {
+            newImage = UIImage(named: "about")!
         }
         
-        else if context.nextFocusedView == self.aboutButton {
-            
-            self.aboutButton.setContentHuggingPriority(249, forAxis:UILayoutConstraintAxis.Horizontal)
-            self.aboutButton.setContentCompressionResistancePriority(750, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-            self.fireplaceButton.setContentHuggingPriority(250, forAxis: UILayoutConstraintAxis.Horizontal)
-            self.fireplaceButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
-            
-            self.fallingSnowButton.setContentHuggingPriority(250, forAxis: UILayoutConstraintAxis.Horizontal)
-            self.fallingSnowButton.setContentCompressionResistancePriority(749, forAxis: UILayoutConstraintAxis.Horizontal)
-
-            
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                
-                self.view.layoutIfNeeded()
-                self.aboutButton.titleLabel?.alpha = 0.0
-                self.fallingSnowButton.titleLabel?.alpha = 1.0
-                self.fireplaceButton.titleLabel?.alpha = 1.0
-            })
-        }
+        UIView.transitionWithView(self.imagePreview, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.imagePreview.image = newImage
+            }, completion:nil)
     }
 }
 

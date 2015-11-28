@@ -17,6 +17,7 @@ class AboutViewController: UIViewController {
     @IBOutlet var cozyFireMakerLabel: UILabel!
     
     @IBOutlet var snowyMotionLabel: UILabel!
+    @IBOutlet var christmasCandlesLabel: UILabel!
     @IBOutlet var snowyMotionMakerLabel: UILabel!
     
     @IBOutlet var wishBackgroundMusicLabel: UILabel!
@@ -39,6 +40,7 @@ class AboutViewController: UIViewController {
         self.cozyFireMakerLabel.alpha = 0.0
         
         self.snowyMotionLabel.alpha = 0.0
+        self.christmasCandlesLabel.alpha = 0.0
         self.snowyMotionMakerLabel.alpha = 0.0
         
         self.wishBackgroundMusicLabel.alpha = 0.0
@@ -74,6 +76,7 @@ class AboutViewController: UIViewController {
                 self.cozyFireMakerLabel.alpha = 1.0
                 
                 self.snowyMotionLabel.alpha = 1.0
+                self.christmasCandlesLabel.alpha = 1.0
                 self.snowyMotionMakerLabel.alpha = 1.0
                 
                 self.wishBackgroundMusicLabel.alpha = 1.0
