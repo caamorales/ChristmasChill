@@ -40,4 +40,6 @@ If you want to make it even better and learn something along the way then feel f
 
 ## License
 
-TODO: Write license
+The code in this project is licensed under the MIT. 
+
+The audio and video content are licensed under their respective creative commons licenses
