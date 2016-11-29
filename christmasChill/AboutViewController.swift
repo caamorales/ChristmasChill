@@ -33,24 +33,24 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.reallyCoolAppLabel.alpha = 0.0
-        self.appContentLabel.alpha = 0.0
+        reallyCoolAppLabel.alpha = 0.0
+        appContentLabel.alpha = 0.0
         
-        self.cozyFireLabel.alpha = 0.0
-        self.cozyFireMakerLabel.alpha = 0.0
+        cozyFireLabel.alpha = 0.0
+        cozyFireMakerLabel.alpha = 0.0
         
-        self.snowyMotionLabel.alpha = 0.0
-        self.christmasCandlesLabel.alpha = 0.0
-        self.snowyMotionMakerLabel.alpha = 0.0
+        snowyMotionLabel.alpha = 0.0
+        christmasCandlesLabel.alpha = 0.0
+        snowyMotionMakerLabel.alpha = 0.0
         
-        self.wishBackgroundMusicLabel.alpha = 0.0
-        self.wishBackgroundMakerLabel.alpha = 0.0
+        wishBackgroundMusicLabel.alpha = 0.0
+        wishBackgroundMakerLabel.alpha = 0.0
         
-        self.xmasTreeLabel.alpha = 0.0
-        self.xmasTreeMakerLabel.alpha = 0.0
+        xmasTreeLabel.alpha = 0.0
+        xmasTreeMakerLabel.alpha = 0.0
         
-        self.beyondWonderlandLabel.alpha = 0.0
-        self.beyondWonderlandMakerLabel.alpha = 0.0
+        beyondWonderlandLabel.alpha = 0.0
+        beyondWonderlandMakerLabel.alpha = 0.0
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,11 +26,11 @@ class VideoViewController: UIViewController {
         super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector:#selector(VideoViewController.restartVideoFromBeginning),
-            name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.videoPlayer.currentItem)
+            name:.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
         
         loadVideo(videoURL!)
         
-        if self.audioURL != nil {
+        if audioURL != nil {
             loadAudio(audioURL!)
             playAudio()
         }
@@ -58,7 +58,7 @@ class VideoViewController: UIViewController {
     fileprivate func loadVideo(_ URLPath: URL) {
         let videoAssetURL = AVURLAsset(url: URLPath)
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-        self.videoPlayer.replaceCurrentItem(with: videoAssetItem)
+        videoPlayer.replaceCurrentItem(with: videoAssetItem)
     }
     
     fileprivate func playVideo() {
@@ -68,16 +68,16 @@ class VideoViewController: UIViewController {
     fileprivate func loadAudio(_ URLPath: URL) {
         
         do {
-            try self.audioPlayer = AVAudioPlayer(contentsOf: URLPath)
-                self.audioPlayer.prepareToPlay()
-                self.audioPlayer.numberOfLoops = -1
+            try audioPlayer = AVAudioPlayer(contentsOf: URLPath)
+                audioPlayer.prepareToPlay()
+                audioPlayer.numberOfLoops = -1
         } catch {
             preconditionFailure("Audio failed to play!")
         }
     }
     
     fileprivate func playAudio() {
-        self.audioPlayer.play()
+        audioPlayer.play()
     }
     
     func restartVideoFromBeginning() {
@@ -87,7 +87,7 @@ class VideoViewController: UIViewController {
         let preferredTimeScale : Int32 = 1
         let seekTime : CMTime = CMTimeMake(seconds, preferredTimeScale)
         
-        self.videoPlayer.seek(to: seekTime)
-        self.videoPlayer.play()
+        videoPlayer.seek(to: seekTime)
+        videoPlayer.play()
     }
 }

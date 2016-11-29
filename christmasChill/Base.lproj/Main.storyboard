@@ -1,30 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Beyond Wonderland.ttf">
+        <array key="Beyond Wonderland.ttf">
             <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-            <string>BeyondWonderland</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Main Menu View Controller-->
@@ -39,70 +26,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="4AJ-oP-fHs">
-                                <rect key="frame" x="220" y="224" width="366" height="632"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB7-tH-EcI">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="83"/>
-                                        <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="38"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Warming Fireplace"/>
-                                        <connections>
-                                            <segue destination="1WU-2J-cNI" kind="show" identifier="fireplaceVideo" id="Cgp-bG-Rf3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-IX-Qtt">
-                                        <rect key="frame" x="0.0" y="183" width="366" height="83"/>
-                                        <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="38"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Falling Snow"/>
-                                        <state key="focused" title="Falling Snow"/>
-                                        <connections>
-                                            <segue destination="1WU-2J-cNI" kind="show" identifier="snowVideo" id="IFr-67-BEO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah8-2O-O16">
-                                        <rect key="frame" x="0.0" y="366" width="366" height="83"/>
-                                        <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="38"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="Soothing Candles"/>
-                                        <connections>
-                                            <segue destination="1WU-2J-cNI" kind="show" identifier="candleVideo" id="EX0-r0-jXK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIX-vV-OpV">
-                                        <rect key="frame" x="0.0" y="549" width="366" height="83"/>
-                                        <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="38"/>
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="About"/>
-                                        <connections>
-                                            <segue destination="NMe-vg-zqO" kind="show" id="fib-2j-6Kd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireplacePreview" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-OD-KeU">
-                                <rect key="frame" x="900" y="290" width="800" height="500"/>
+                                <rect key="frame" x="560" y="190" width="800" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="800" id="DXP-JI-OKC"/>
                                     <constraint firstAttribute="height" constant="500" id="hI4-tG-i3F"/>
                                 </constraints>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-Hb-3Bp">
+                                <rect key="frame" x="0.0" y="803" width="1920" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7hB-Sl-9mV">
+                                    <size key="itemSize" width="468" height="201"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="HhE-0H-njo">
+                                        <rect key="frame" x="0.0" y="38" width="468" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="468" height="201"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="bu8-OD-KeU" secondAttribute="trailing" constant="200" id="6zm-Ep-ota"/>
-                            <constraint firstItem="bu8-OD-KeU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cti-LC-sTq"/>
-                            <constraint firstItem="4AJ-oP-fHs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="200" id="YI6-w9-vCT"/>
-                            <constraint firstItem="4AJ-oP-fHs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vCK-IA-DZU"/>
+                            <constraint firstItem="bu8-OD-KeU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kw-ib-FlM"/>
+                            <constraint firstItem="bu8-OD-KeU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Cti-LC-sTq"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="aboutButton" destination="XIX-vV-OpV" id="iI8-xu-9P9"/>
-                        <outlet property="fallingSnowButton" destination="0NM-IX-Qtt" id="OF9-Xx-7FF"/>
-                        <outlet property="fireplaceButton" destination="DB7-tH-EcI" id="sBp-lB-LyP"/>
                         <outlet property="imagePreview" destination="bu8-OD-KeU" id="Cbt-9s-Jwz"/>
-                        <outlet property="soothingCandlesButton" destination="ah8-2O-O16" id="teR-Fd-Iht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,7 +85,7 @@
                             </imageView>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehc-MO-ZXf">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christmas Candles Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i03-1c-qN5">
                                 <rect key="frame" x="730" y="760" width="460" height="41"/>
@@ -133,37 +93,38 @@
                                     <constraint firstAttribute="width" constant="460" id="7Z0-Ll-Vzh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christmas Chill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-95-vKZ">
                                 <rect key="frame" x="704" y="100" width="511" height="101"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="90"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A really cool christmas app made by Darryl Bayliss (@dazindustries)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-fN-QNT">
                                 <rect key="frame" x="400" y="301" width="1120" height="135"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App content responsibly sourced and licensed from these amazingly talented people:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-bH-oCy">
                                 <rect key="frame" x="400" y="484" width="1120" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cozy Fire in the Fireplace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HV-v4-XQw">
                                 <rect key="frame" x="150" y="699" width="396" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matt Wood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPg-Jq-pY3">
                                 <rect key="frame" x="270" y="746" width="157" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snowy Night Motion Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9L-si-Odd">
@@ -172,49 +133,49 @@
                                     <constraint firstAttribute="width" constant="460" id="zoh-2f-tmI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="freeworshiploops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spP-cZ-Az4">
                                 <rect key="frame" x="851" y="820" width="219" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wish Background Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-7j-Gdx">
                                 <rect key="frame" x="1428" y="699" width="342" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin MacLeod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-RN-3ta">
                                 <rect key="frame" x="1487" y="746" width="225" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xmas Tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-M7-253">
                                 <rect key="frame" x="560" y="859" width="152" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ricardo Motti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-CO-pe4">
                                 <rect key="frame" x="540" y="906" width="192" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beyond Wonderland Font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-m2-DcX">
                                 <rect key="frame" x="1142" y="859" width="358" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chris Hansen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-Yj-da8">
                                 <rect key="frame" x="1229" y="906" width="184" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -299,7 +260,9 @@
         <image name="about" width="3456" height="2304"/>
         <image name="fireplacePreview" width="2880" height="1800"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="EX0-r0-jXK"/>
-    </inferredMetricsTieBreakers>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

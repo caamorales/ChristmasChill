@@ -11,6 +11,23 @@ import UIKit
 class VideoAudioManager: NSObject {
     
     static let sharedInstance = VideoAudioManager()
+        
+//    let fireplacePreviewIdentifier = "fireplacePreview"
+//    
+//    let snowFallingIdentifier = "snowFallingIdentifier"
+//    
+//    let soothingCandlesIdentifier = "soothingCandlesPreview"
+//    
+//    let fireplaceVideoIdentifier = "fireplaceVideo"
+//    
+//    let snowVideoIdentifier = "snowVideo"
+//    
+//    let candleVideoIdentifier = "candleVideo"
+    
+//    let aboutIdentifier = "about"
+    
+    let fileNotFound = "FILE NOT FOUND"
+    
     
     override init() {
         print("VideoAudioManager Singleton Initialised!")
@@ -21,22 +38,21 @@ class VideoAudioManager: NSObject {
         var videoFileName:String?
         
         switch selectedVideo {
-        case "fireplaceVideo":
+        case ScreenIdentifer.fireplace.rawValue:
             videoFileName = "fireplace"
             break;
-        case "snowVideo":
+        case ScreenIdentifer.snowFalling.rawValue:
             videoFileName = "snow"
-            
-        case "candleVideo":
+        case ScreenIdentifer.soothingCandles.rawValue:
             videoFileName = "christmasCandles"
         default:
-            preconditionFailure("VIDEO NOT FOUND")
+            preconditionFailure(fileNotFound)
         }
         
         let videoURLString:String? = Bundle.main.path(forResource: videoFileName, ofType: "mp4")
         
         if(videoURLString == nil) {
-            preconditionFailure("VIDEO NOT FOUND")
+            preconditionFailure(fileNotFound)
         }
         
         return URL(fileURLWithPath:videoURLString!)
@@ -47,16 +63,16 @@ class VideoAudioManager: NSObject {
         let audioFileName:String?
         
         switch selectedVideo {
-        case "fireplaceVideo":
+        case ScreenIdentifer.fireplace.rawValue:
             audioFileName = nil
             break
-        case "snowVideo":
+        case ScreenIdentifer.snowFalling.rawValue:
             audioFileName = "snowAudio"
             
-        case "candleVideo":
+        case ScreenIdentifer.soothingCandles.rawValue:
             audioFileName = nil
         default:
-            preconditionFailure("AUDIO NOT FOUND")
+            preconditionFailure(fileNotFound)
         }
         
         if audioFileName != nil {

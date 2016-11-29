@@ -10,11 +10,7 @@ import UIKit
 
 class MainMenuViewController: UIViewController {
     
-    @IBOutlet var imagePreview: UIImageView!
-    @IBOutlet var fireplaceButton: UIButton!
-    @IBOutlet var fallingSnowButton: UIButton!
-    @IBOutlet var soothingCandlesButton: UIButton!
-    @IBOutlet var aboutButton: UIButton!
+    @IBOutlet private weak var imagePreview: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,29 +35,29 @@ class MainMenuViewController: UIViewController {
         }
     }
     
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        
-        let newImage:UIImage
-        
-        if context.nextFocusedView == self.fireplaceButton {
-            newImage = UIImage(named: "fireplacePreview")!
-        }
-            
-        else if context.nextFocusedView == self.fallingSnowButton {
-            newImage = UIImage(named: "snowFallingPreview")!
-        }
-            
-        else if context.nextFocusedView == self.soothingCandlesButton {
-            newImage = UIImage(named: "soothingCandlesPreview")!
-        }
-            
-        else {
-            newImage = UIImage(named: "about")!
-        }
-        
-        UIView.transition(with: self.imagePreview, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
-            self.imagePreview.image = newImage
-            }, completion:nil)
-    }
+//    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+//        
+//        let newImage:UIImage
+//        
+//        if context.nextFocusedView == fireplaceButton {
+//            newImage = UIImage(named: PreviewIdentifier.fireplace.rawValue)!
+//        }
+//            
+//        else if context.nextFocusedView == fallingSnowButton {
+//            newImage = UIImage(named: PreviewIdentifier.snowFalling.rawValue)!
+//        }
+//            
+//        else if context.nextFocusedView == soothingCandlesButton {
+//            newImage = UIImage(named: PreviewIdentifier.soothingCandles.rawValue)!
+//        }
+//            
+//        else {
+//            newImage = UIImage(named: PreviewIdentifier.about.rawValue)!
+//        }
+//        
+//        UIView.transition(with: imagePreview, duration: 0.5, options: .transitionCrossDissolve, animations: { () -> Void in
+//            self.imagePreview.image = newImage
+//            }, completion:nil)
+//    }
 }
 
