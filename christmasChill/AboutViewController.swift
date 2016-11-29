@@ -58,20 +58,20 @@ class AboutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
-        UIView.animateWithDuration(1.0, delay: 0.2,
-            options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 1.0, delay: 0.2,
+            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.reallyCoolAppLabel.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0, delay: 0.5,
-            options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 1.0, delay: 0.5,
+            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
                 self.appContentLabel.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0, delay: 0.8,
-            options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 1.0, delay: 0.8,
+            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
                 self.cozyFireLabel.alpha = 1.0
                 self.cozyFireMakerLabel.alpha = 1.0
                 
@@ -83,8 +83,8 @@ class AboutViewController: UIViewController {
                 self.wishBackgroundMakerLabel.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(1.0, delay: 1.1,
-            options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 1.0, delay: 1.1,
+            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
                 self.xmasTreeLabel.alpha = 1.0
                 self.xmasTreeMakerLabel.alpha = 1.0
                 

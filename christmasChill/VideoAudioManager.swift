@@ -16,7 +16,7 @@ class VideoAudioManager: NSObject {
         print("VideoAudioManager Singleton Initialised!")
     }
     
-    internal func determineVideoWithSegueIdentifier(selectedVideo:String) -> NSURL {
+    internal func determineVideoWithSegueIdentifier(_ selectedVideo:String) -> URL {
         
         var videoFileName:String?
         
@@ -33,16 +33,16 @@ class VideoAudioManager: NSObject {
             preconditionFailure("VIDEO NOT FOUND")
         }
         
-        let videoURLString:String? = NSBundle.mainBundle().pathForResource(videoFileName, ofType: "mp4")
+        let videoURLString:String? = Bundle.main.path(forResource: videoFileName, ofType: "mp4")
         
         if(videoURLString == nil) {
             preconditionFailure("VIDEO NOT FOUND")
         }
         
-        return NSURL(fileURLWithPath:videoURLString!)
+        return URL(fileURLWithPath:videoURLString!)
     }
     
-    internal func determineAudioWithSegueIdentifier(selectedVideo:String) -> NSURL? {
+    internal func determineAudioWithSegueIdentifier(_ selectedVideo:String) -> URL? {
         
         let audioFileName:String?
         
@@ -60,8 +60,8 @@ class VideoAudioManager: NSObject {
         }
         
         if audioFileName != nil {
-            let audioURLString:String! = NSBundle.mainBundle().pathForResource(audioFileName, ofType: "mp3")
-            return NSURL(fileURLWithPath:audioURLString)
+            let audioURLString:String! = Bundle.main.path(forResource: audioFileName, ofType: "mp3")
+            return URL(fileURLWithPath:audioURLString)
         } else {
            return nil
         }

@@ -11,8 +11,8 @@ import AVFoundation
 
 class VideoViewController: UIViewController {
     
-    var videoURL:NSURL = NSURL()
-    var audioURL:NSURL? = NSURL()
+    var videoURL:URL?
+    var audioURL:URL?
     let videoPlayer = AVPlayer()
     var audioPlayer = AVAudioPlayer()
     
@@ -22,13 +22,13 @@ class VideoViewController: UIViewController {
         setupVideoPlayer()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"restartVideoFromBeginning",
-            name:AVPlayerItemDidPlayToEndTimeNotification, object: self.videoPlayer.currentItem)
+        NotificationCenter.default.addObserver(self, selector:#selector(VideoViewController.restartVideoFromBeginning),
+            name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.videoPlayer.currentItem)
         
-        loadVideo(videoURL)
+        loadVideo(videoURL!)
         
         if self.audioURL != nil {
             loadAudio(audioURL!)
@@ -38,10 +38,10 @@ class VideoViewController: UIViewController {
         playVideo()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,26 +49,26 @@ class VideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func setupVideoPlayer() {
+    fileprivate func setupVideoPlayer() {
         let videoPlayerLayer = AVPlayerLayer(player:videoPlayer)
         videoPlayerLayer.frame = self.view.bounds;
         self.view.layer.addSublayer(videoPlayerLayer)
     }
     
-    private func loadVideo(URLPath: NSURL) {
-        let videoAssetURL = AVURLAsset(URL: URLPath)
+    fileprivate func loadVideo(_ URLPath: URL) {
+        let videoAssetURL = AVURLAsset(url: URLPath)
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
-        self.videoPlayer.replaceCurrentItemWithPlayerItem(videoAssetItem)
+        self.videoPlayer.replaceCurrentItem(with: videoAssetItem)
     }
     
-    private func playVideo() {
+    fileprivate func playVideo() {
         videoPlayer.play()
     }
     
-    private func loadAudio(URLPath: NSURL) {
+    fileprivate func loadAudio(_ URLPath: URL) {
         
         do {
-            try self.audioPlayer = AVAudioPlayer(contentsOfURL: URLPath)
+            try self.audioPlayer = AVAudioPlayer(contentsOf: URLPath)
                 self.audioPlayer.prepareToPlay()
                 self.audioPlayer.numberOfLoops = -1
         } catch {
@@ -76,7 +76,7 @@ class VideoViewController: UIViewController {
         }
     }
     
-    private func playAudio() {
+    fileprivate func playAudio() {
         self.audioPlayer.play()
     }
     
@@ -87,7 +87,7 @@ class VideoViewController: UIViewController {
         let preferredTimeScale : Int32 = 1
         let seekTime : CMTime = CMTimeMake(seconds, preferredTimeScale)
         
-        self.videoPlayer.seekToTime(seekTime)
+        self.videoPlayer.seek(to: seekTime)
         self.videoPlayer.play()
     }
 }

@@ -26,9 +26,9 @@ class MainMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let videoVC = segue.destinationViewController as? VideoViewController {
+        if let videoVC = segue.destination as? VideoViewController {
             let segueIdentifier = segue.identifier!
             videoVC.videoURL = VideoAudioManager.sharedInstance.determineVideoWithSegueIdentifier(segueIdentifier)
             if let audioURL = VideoAudioManager.sharedInstance.determineAudioWithSegueIdentifier(segueIdentifier) {
@@ -39,7 +39,7 @@ class MainMenuViewController: UIViewController {
         }
     }
     
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
         let newImage:UIImage
         
@@ -59,7 +59,7 @@ class MainMenuViewController: UIViewController {
             newImage = UIImage(named: "about")!
         }
         
-        UIView.transitionWithView(self.imagePreview, duration: 0.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+        UIView.transition(with: self.imagePreview, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
             self.imagePreview.image = newImage
             }, completion:nil)
     }
