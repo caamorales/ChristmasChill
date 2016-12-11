@@ -13,14 +13,15 @@
 		691A66341BEE760300910E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691A66331BEE760300910E1B /* Assets.xcassets */; };
 		691A663F1BEE760300910E1B /* christmasChillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A663E1BEE760300910E1B /* christmasChillTests.swift */; };
 		691A664A1BEE760300910E1B /* christmasChillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A66491BEE760300910E1B /* christmasChillUITests.swift */; };
+		696DB32D1DEE31BC00B4DE87 /* PreviewNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DB32C1DEE31BC00B4DE87 /* PreviewNameCollectionViewCell.swift */; };
 		696DD4F71C0A3E9200DA20DF /* christmasCandles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 696DD4F61C0A3E8B00DA20DF /* christmasCandles.mp4 */; };
 		6983CAC51C446EC1002EF1C3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6983CAC41C446EC1002EF1C3 /* LICENSE.txt */; };
 		698411931BF28529001086D0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698411921BF28529001086D0 /* VideoViewController.swift */; };
-		69CE82F31DEE2F0800B268FC /* PreviewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE82F21DEE2F0800B268FC /* PreviewIdentifier.swift */; };
-		69CE82F51DEE2F2E00B268FC /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE82F41DEE2F2E00B268FC /* ScreenIdentifier.swift */; };
+		69CE82F51DEE2F2E00B268FC /* ContentIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE82F41DEE2F2E00B268FC /* ContentIdentifier.swift */; };
 		69D20AE01BFBE47700E2440C /* Beyond Wonderland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */; };
 		69D20AE21BFBE89300E2440C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D20AE11BFBE89300E2440C /* AboutViewController.swift */; };
-		69EC89CA1BF9220B00B7E309 /* VideoAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */; };
+		69DAB6D51DFE0E40005B00ED /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DAB6D41DFE0E40005B00ED /* Content.swift */; };
+		69EC89CA1BF9220B00B7E309 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC89C91BF9220B00B7E309 /* ContentManager.swift */; };
 		69EC89CC1BF9318700B7E309 /* snow.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CB1BF9309900B7E309 /* snow.mp4 */; };
 		69EC89CE1BF9346600B7E309 /* fireplace.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */; };
 		69EC89D01BF935F400B7E309 /* snowAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69EC89CF1BF935F400B7E309 /* snowAudio.mp3 */; };
@@ -56,14 +57,15 @@
 		691A66451BEE760300910E1B /* christmasChillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = christmasChillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691A66491BEE760300910E1B /* christmasChillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = christmasChillUITests.swift; sourceTree = "<group>"; };
 		691A664B1BEE760300910E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696DB32C1DEE31BC00B4DE87 /* PreviewNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		696DD4F61C0A3E8B00DA20DF /* christmasCandles.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = christmasCandles.mp4; sourceTree = "<group>"; };
 		6983CAC41C446EC1002EF1C3 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		698411921BF28529001086D0 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		69CE82F21DEE2F0800B268FC /* PreviewIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewIdentifier.swift; sourceTree = "<group>"; };
-		69CE82F41DEE2F2E00B268FC /* ScreenIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenIdentifier.swift; sourceTree = "<group>"; };
+		69CE82F41DEE2F2E00B268FC /* ContentIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentIdentifier.swift; sourceTree = "<group>"; };
 		69D20ADF1BFBE47700E2440C /* Beyond Wonderland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beyond Wonderland.ttf"; sourceTree = "<group>"; };
 		69D20AE11BFBE89300E2440C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAudioManager.swift; sourceTree = "<group>"; };
+		69DAB6D41DFE0E40005B00ED /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		69EC89C91BF9220B00B7E309 /* ContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		69EC89CB1BF9309900B7E309 /* snow.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow.mp4; sourceTree = "<group>"; };
 		69EC89CD1BF9345D00B7E309 /* fireplace.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fireplace.mp4; sourceTree = "<group>"; };
 		69EC89CF1BF935F400B7E309 /* snowAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowAudio.mp3; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				691A662E1BEE760300910E1B /* MainMenuViewController.swift */,
+				696DB32C1DEE31BC00B4DE87 /* PreviewNameCollectionViewCell.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -188,9 +191,9 @@
 		69CE82F11DEE2BAD00B268FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				69EC89C91BF9220B00B7E309 /* VideoAudioManager.swift */,
-				69CE82F21DEE2F0800B268FC /* PreviewIdentifier.swift */,
-				69CE82F41DEE2F2E00B268FC /* ScreenIdentifier.swift */,
+				69EC89C91BF9220B00B7E309 /* ContentManager.swift */,
+				69CE82F41DEE2F2E00B268FC /* ContentIdentifier.swift */,
+				69DAB6D41DFE0E40005B00ED /* Content.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -351,11 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696DB32D1DEE31BC00B4DE87 /* PreviewNameCollectionViewCell.swift in Sources */,
 				698411931BF28529001086D0 /* VideoViewController.swift in Sources */,
-				69CE82F51DEE2F2E00B268FC /* ScreenIdentifier.swift in Sources */,
-				69CE82F31DEE2F0800B268FC /* PreviewIdentifier.swift in Sources */,
+				69CE82F51DEE2F2E00B268FC /* ContentIdentifier.swift in Sources */,
+				69DAB6D51DFE0E40005B00ED /* Content.swift in Sources */,
 				691A662F1BEE760300910E1B /* MainMenuViewController.swift in Sources */,
-				69EC89CA1BF9220B00B7E309 /* VideoAudioManager.swift in Sources */,
+				69EC89CA1BF9220B00B7E309 /* ContentManager.swift in Sources */,
 				69D20AE21BFBE89300E2440C /* AboutViewController.swift in Sources */,
 				691A662D1BEE760300910E1B /* AppDelegate.swift in Sources */,
 			);

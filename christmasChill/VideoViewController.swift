@@ -11,14 +11,12 @@ import AVFoundation
 
 class VideoViewController: UIViewController {
     
-    var videoURL:URL?
-    var audioURL:URL?
+    var content: Content?
     let videoPlayer = AVPlayer()
     var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupVideoPlayer()
     }
     
@@ -28,14 +26,16 @@ class VideoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:#selector(VideoViewController.restartVideoFromBeginning),
             name:.AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem)
         
-        loadVideo(videoURL!)
+        if let videoURL = content?.video {
+            loadVideo(videoURL)
+        }
         
-        if audioURL != nil {
-            loadAudio(audioURL!)
+        if let audioURL = content?.sound {
+            loadAudio(audioURL)
             playAudio()
         }
         
-        playVideo()
+        videoPlayer.play()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,11 +44,6 @@ class VideoViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     fileprivate func setupVideoPlayer() {
         let videoPlayerLayer = AVPlayerLayer(player:videoPlayer)
         videoPlayerLayer.frame = self.view.bounds;
@@ -59,10 +54,6 @@ class VideoViewController: UIViewController {
         let videoAssetURL = AVURLAsset(url: URLPath)
         let videoAssetItem = AVPlayerItem(asset: videoAssetURL)
         videoPlayer.replaceCurrentItem(with: videoAssetItem)
-    }
-    
-    fileprivate func playVideo() {
-        videoPlayer.play()
     }
     
     fileprivate func loadAudio(_ URLPath: URL) {
