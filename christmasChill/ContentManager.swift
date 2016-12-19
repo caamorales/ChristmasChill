@@ -12,7 +12,7 @@ class ContentManager {
     
     init() {
 
-        let contentIdentifiers = [ContentIdentifier.fireplace, ContentIdentifier.snowFalling, ContentIdentifier.soothingCandles, ContentIdentifier.about]
+        let contentIdentifiers = [ContentIdentifier.fireplace, ContentIdentifier.snowFalling, ContentIdentifier.soothingCandles, ContentIdentifier.festiveSnow, ContentIdentifier.christmasTree, ContentIdentifier.threeKings, ContentIdentifier.about]
         
         var content : [Content] = []
         

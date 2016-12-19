@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "idiom" : "tv",
+      "filename" : "Screen Shot 2016-12-18 at 18.13.36.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

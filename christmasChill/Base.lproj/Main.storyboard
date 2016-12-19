@@ -34,9 +34,9 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-Hb-3Bp">
-                                <rect key="frame" x="0.0" y="804" width="1920" height="276"/>
+                                <rect key="frame" x="30" y="804" width="1860" height="276"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7hB-Sl-9mV">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="40" minimumInteritemSpacing="10" id="7hB-Sl-9mV">
                                     <size key="itemSize" width="468" height="201"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -50,20 +50,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="468" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5u-iQ-aJp">
-                                                    <rect key="frame" x="217" y="90" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duP-RD-1cR">
+                                                    <rect key="frame" x="8" y="8" width="452" height="185"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="H5u-iQ-aJp" firstAttribute="centerX" secondItem="HhE-0H-njo" secondAttribute="centerX" id="4LO-zk-AsR"/>
-                                            <constraint firstItem="H5u-iQ-aJp" firstAttribute="centerY" secondItem="HhE-0H-njo" secondAttribute="centerY" id="aGO-f4-nOj"/>
+                                            <constraint firstItem="duP-RD-1cR" firstAttribute="leading" secondItem="HhE-0H-njo" secondAttribute="leadingMargin" id="FNt-QX-S9J"/>
+                                            <constraint firstItem="duP-RD-1cR" firstAttribute="top" secondItem="HhE-0H-njo" secondAttribute="topMargin" id="Pgo-1R-thg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="duP-RD-1cR" secondAttribute="trailing" id="iGq-FA-wex"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="duP-RD-1cR" secondAttribute="bottom" id="xJx-jH-LRr"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="previewTitle" destination="H5u-iQ-aJp" id="C9a-Nd-hCw"/>
+                                            <outlet property="image" destination="duP-RD-1cR" id="7Ly-7B-h9a"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -79,8 +78,8 @@
                             <constraint firstItem="bu8-OD-KeU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Cti-LC-sTq"/>
                             <constraint firstItem="fRR-Hb-3Bp" firstAttribute="top" secondItem="bu8-OD-KeU" secondAttribute="bottom" constant="114" id="Dag-uT-bZp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fRR-Hb-3Bp" secondAttribute="bottom" id="Rdu-i7-nwf"/>
-                            <constraint firstItem="fRR-Hb-3Bp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S4D-Ai-vPt"/>
-                            <constraint firstAttribute="trailing" secondItem="fRR-Hb-3Bp" secondAttribute="trailing" id="etL-b2-guV"/>
+                            <constraint firstItem="fRR-Hb-3Bp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="S4D-Ai-vPt"/>
+                            <constraint firstAttribute="trailing" secondItem="fRR-Hb-3Bp" secondAttribute="trailing" constant="30" id="etL-b2-guV"/>
                             <constraint firstItem="fRR-Hb-3Bp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xIy-nu-y5j"/>
                         </constraints>
                     </view>
@@ -106,15 +105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about" translatesAutoresizingMaskIntoConstraints="NO" id="vMG-2y-G59">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                            </imageView>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehc-MO-ZXf">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christmas Candles Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i03-1c-qN5">
-                                <rect key="frame" x="730" y="760" width="460" height="41"/>
+                                <rect key="frame" x="730" y="600" width="460" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="460" id="7Z0-Ll-Vzh"/>
                                 </constraints>
@@ -128,33 +120,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A really cool christmas app made by Darryl Bayliss (@dazindustries)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-fN-QNT">
-                                <rect key="frame" x="400" y="301" width="1120" height="135"/>
-                                <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="60"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App content responsibly sourced and licensed from these amazingly talented people:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-bH-oCy">
-                                <rect key="frame" x="400" y="484" width="1120" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App content responsibly sourced and licensed from these amazingly talented people:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-bH-oCy">
+                                <rect key="frame" x="220" y="301" width="1480" height="112"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cozy Fire in the Fireplace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HV-v4-XQw">
-                                <rect key="frame" x="150" y="699" width="396" height="41"/>
+                                <rect key="frame" x="150" y="539" width="396" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matt Wood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPg-Jq-pY3">
-                                <rect key="frame" x="270" y="746" width="157" height="41"/>
+                                <rect key="frame" x="270" y="586" width="157" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snowy Night Motion Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9L-si-Odd">
-                                <rect key="frame" x="730" y="699" width="460" height="41"/>
+                                <rect key="frame" x="730" y="539" width="460" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="460" id="zoh-2f-tmI"/>
                                 </constraints>
@@ -163,84 +148,93 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="freeworshiploops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spP-cZ-Az4">
-                                <rect key="frame" x="851" y="820" width="219" height="41"/>
+                                <rect key="frame" x="851" y="660" width="219" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wish Background Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-7j-Gdx">
-                                <rect key="frame" x="1428" y="699" width="342" height="41"/>
+                                <rect key="frame" x="1428" y="539" width="342" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin MacLeod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-RN-3ta">
-                                <rect key="frame" x="1487" y="746" width="225" height="41"/>
+                                <rect key="frame" x="1487" y="586" width="225" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xmas Tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-M7-253">
-                                <rect key="frame" x="560" y="859" width="152" height="41"/>
+                                <rect key="frame" x="560" y="739" width="152" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ricardo Motti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-CO-pe4">
-                                <rect key="frame" x="540" y="906" width="192" height="41"/>
+                                <rect key="frame" x="540" y="786" width="192" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beyond Wonderland Font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbO-m2-DcX">
-                                <rect key="frame" x="1142" y="859" width="358" height="41"/>
+                                <rect key="frame" x="1142" y="739" width="358" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chris Hansen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQX-Yj-da8">
-                                <rect key="frame" x="1229" y="906" width="184" height="41"/>
+                                <rect key="frame" x="1229" y="786" width="184" height="41"/>
+                                <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dagubi.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGN-bY-Ock">
+                                <rect key="frame" x="886" y="931" width="149" height="41"/>
+                                <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Christmas Tree, Snow Flakes Falling &amp; Merry Christmas Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HB-OB-OPA">
+                                <rect key="frame" x="497" y="882" width="926" height="41"/>
                                 <fontDescription key="fontDescription" name="BeyondWonderland" family="Beyond Wonderland" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ehc-MO-ZXf" secondAttribute="trailing" id="1YI-bD-3Tg"/>
-                            <constraint firstItem="jrB-fN-QNT" firstAttribute="top" secondItem="pCD-95-vKZ" secondAttribute="bottom" constant="100" id="2Bs-yr-FzA"/>
                             <constraint firstAttribute="trailing" secondItem="tMv-7j-Gdx" secondAttribute="trailing" constant="150" id="2zd-Dj-2KS"/>
-                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="vMG-2y-G59" secondAttribute="bottom" id="5mm-IM-EAa"/>
                             <constraint firstItem="WG6-CO-pe4" firstAttribute="centerX" secondItem="MfW-M7-253" secondAttribute="centerX" id="68B-fR-U2G"/>
-                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="Ehc-MO-ZXf" secondAttribute="bottom" id="6Xu-mS-JWU"/>
                             <constraint firstItem="h9L-si-Odd" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="6nV-ch-s27"/>
                             <constraint firstItem="pCD-95-vKZ" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="83f-89-yNz"/>
                             <constraint firstItem="MfW-M7-253" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leading" constant="560" id="AFC-2h-jpG"/>
-                            <constraint firstItem="jrB-fN-QNT" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leading" constant="400" id="AtK-Wc-RAy"/>
-                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="MfW-M7-253" secondAttribute="bottom" constant="180" id="BzO-B6-KLh"/>
+                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="MfW-M7-253" secondAttribute="bottom" constant="300" id="BzO-B6-KLh"/>
                             <constraint firstItem="QQX-Yj-da8" firstAttribute="centerX" secondItem="SbO-m2-DcX" secondAttribute="centerX" id="DFw-Sz-PGp"/>
                             <constraint firstItem="3HV-v4-XQw" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leading" constant="150" id="Dbt-Ow-bYn"/>
                             <constraint firstItem="spP-cZ-Az4" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="Dlh-to-I82"/>
                             <constraint firstItem="QPg-Jq-pY3" firstAttribute="top" secondItem="3HV-v4-XQw" secondAttribute="bottom" constant="6" id="Eb4-7y-KND"/>
-                            <constraint firstAttribute="trailing" secondItem="vMG-2y-G59" secondAttribute="trailing" id="GxY-FR-KY2"/>
-                            <constraint firstItem="jrB-fN-QNT" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="HUl-s7-y4g"/>
-                            <constraint firstItem="vMG-2y-G59" firstAttribute="top" secondItem="jmL-dY-2KL" secondAttribute="bottom" id="JhS-Y1-EPh"/>
-                            <constraint firstItem="vMG-2y-G59" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leading" id="Peb-26-un8"/>
-                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="3HV-v4-XQw" secondAttribute="bottom" constant="340" id="Qiy-FB-Bb6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pLM-bH-oCy" secondAttribute="trailing" constant="200" id="HMf-x7-OoL"/>
+                            <constraint firstItem="pLM-bH-oCy" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="HfS-dq-7xf"/>
+                            <constraint firstItem="lGN-bY-Ock" firstAttribute="centerX" secondItem="2HB-OB-OPA" secondAttribute="centerX" id="KZ4-6Q-Xza"/>
+                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="3HV-v4-XQw" secondAttribute="bottom" constant="500" id="Qiy-FB-Bb6"/>
                             <constraint firstItem="QQX-Yj-da8" firstAttribute="top" secondItem="SbO-m2-DcX" secondAttribute="bottom" constant="6" id="RzV-K5-xMx"/>
                             <constraint firstItem="WG6-CO-pe4" firstAttribute="top" secondItem="MfW-M7-253" secondAttribute="bottom" constant="6" id="TIt-CI-zJg"/>
-                            <constraint firstItem="Ehc-MO-ZXf" firstAttribute="top" secondItem="jmL-dY-2KL" secondAttribute="bottom" id="TUl-nq-IlO"/>
+                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="lGN-bY-Ock" secondAttribute="bottom" constant="108" id="XUc-fI-Q7G"/>
                             <constraint firstItem="spP-cZ-Az4" firstAttribute="top" secondItem="i03-1c-qN5" secondAttribute="bottom" constant="19" id="Xhk-S6-nUX"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="SbO-m2-DcX" secondAttribute="bottom" constant="180" id="Yxl-X2-yL1"/>
+                            <constraint firstItem="pLM-bH-oCy" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leadingMargin" constant="200" id="Yj4-20-8Sw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SbO-m2-DcX" secondAttribute="bottom" constant="300" id="Yxl-X2-yL1"/>
                             <constraint firstItem="cMG-RN-3ta" firstAttribute="top" secondItem="tMv-7j-Gdx" secondAttribute="bottom" constant="6" id="aJj-pv-KRe"/>
                             <constraint firstItem="i03-1c-qN5" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="cdS-py-NV4"/>
                             <constraint firstItem="pCD-95-vKZ" firstAttribute="top" secondItem="jmL-dY-2KL" secondAttribute="bottom" constant="100" id="euf-fM-ZZC"/>
-                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="tMv-7j-Gdx" secondAttribute="bottom" constant="340" id="gJs-g2-QoU"/>
+                            <constraint firstItem="UmB-yS-KCl" firstAttribute="top" secondItem="tMv-7j-Gdx" secondAttribute="bottom" constant="500" id="gJs-g2-QoU"/>
                             <constraint firstItem="QPg-Jq-pY3" firstAttribute="centerX" secondItem="3HV-v4-XQw" secondAttribute="centerX" id="iGb-3B-0TH"/>
                             <constraint firstItem="i03-1c-qN5" firstAttribute="top" secondItem="h9L-si-Odd" secondAttribute="bottom" constant="20" id="j4T-wS-cQM"/>
+                            <constraint firstItem="2HB-OB-OPA" firstAttribute="centerX" secondItem="KgD-wx-Vf6" secondAttribute="centerX" id="kRB-q2-tkw"/>
                             <constraint firstItem="cMG-RN-3ta" firstAttribute="centerX" secondItem="tMv-7j-Gdx" secondAttribute="centerX" id="m68-Eb-re3"/>
-                            <constraint firstItem="Ehc-MO-ZXf" firstAttribute="leading" secondItem="KgD-wx-Vf6" secondAttribute="leading" id="rJ0-T8-vmb"/>
+                            <constraint firstItem="pLM-bH-oCy" firstAttribute="top" secondItem="pCD-95-vKZ" secondAttribute="bottom" constant="100" id="tKg-a6-hWa"/>
+                            <constraint firstItem="lGN-bY-Ock" firstAttribute="top" secondItem="2HB-OB-OPA" secondAttribute="bottom" constant="8" id="w72-1K-DnJ"/>
                             <constraint firstItem="h9L-si-Odd" firstAttribute="top" secondItem="3HV-v4-XQw" secondAttribute="top" id="y1l-gt-rCD"/>
-                            <constraint firstAttribute="trailing" secondItem="jrB-fN-QNT" secondAttribute="trailing" constant="400" id="yhJ-a7-agZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SbO-m2-DcX" secondAttribute="trailing" constant="400" id="zj8-dO-ymQ"/>
                         </constraints>
                     </view>
@@ -251,7 +245,8 @@
                         <outlet property="christmasCandlesLabel" destination="i03-1c-qN5" id="PVK-Du-hI4"/>
                         <outlet property="cozyFireLabel" destination="3HV-v4-XQw" id="wlr-VF-4Gh"/>
                         <outlet property="cozyFireMakerLabel" destination="QPg-Jq-pY3" id="bgG-Ge-GAM"/>
-                        <outlet property="reallyCoolAppLabel" destination="jrB-fN-QNT" id="xbM-uQ-mtI"/>
+                        <outlet property="dagubiVideosLabel" destination="2HB-OB-OPA" id="b5h-2u-BT8"/>
+                        <outlet property="dagubiVideosMakerLabel" destination="lGN-bY-Ock" id="Xxx-eJ-IBY"/>
                         <outlet property="snowyMotionLabel" destination="h9L-si-Odd" id="v2f-tR-lDF"/>
                         <outlet property="snowyMotionMakerLabel" destination="spP-cZ-Az4" id="q5h-8I-R2i"/>
                         <outlet property="wishBackgroundMakerLabel" destination="cMG-RN-3ta" id="xE1-H5-VzH"/>
@@ -283,7 +278,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about" width="3456" height="2304"/>
         <image name="fireplacePreview" width="2880" height="1800"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

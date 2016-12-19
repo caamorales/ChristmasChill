@@ -10,7 +10,6 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    @IBOutlet var reallyCoolAppLabel: UILabel!
     @IBOutlet var appContentLabel: UILabel!
     
     @IBOutlet var cozyFireLabel: UILabel!
@@ -29,11 +28,14 @@ class AboutViewController: UIViewController {
     @IBOutlet var beyondWonderlandLabel: UILabel!
     @IBOutlet var beyondWonderlandMakerLabel: UILabel!
     
+    @IBOutlet weak var dagubiVideosLabel: UILabel!
+    @IBOutlet weak var dagubiVideosMakerLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        reallyCoolAppLabel.alpha = 0.0
         appContentLabel.alpha = 0.0
         
         cozyFireLabel.alpha = 0.0
@@ -51,6 +53,9 @@ class AboutViewController: UIViewController {
         
         beyondWonderlandLabel.alpha = 0.0
         beyondWonderlandMakerLabel.alpha = 0.0
+        
+        dagubiVideosLabel.alpha = 0.0
+        dagubiVideosMakerLabel.alpha = 0.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,11 +64,6 @@ class AboutViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        UIView.animate(withDuration: 1.0, delay: 0.2,
-            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
-            self.reallyCoolAppLabel.alpha = 1.0
-            }, completion: nil)
         
         UIView.animate(withDuration: 1.0, delay: 0.5,
             options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
@@ -91,17 +91,11 @@ class AboutViewController: UIViewController {
                 self.beyondWonderlandLabel.alpha = 1.0
                 self.beyondWonderlandMakerLabel.alpha = 1.0
             }, completion: nil)
+        
+        UIView.animate(withDuration: 1.0, delay: 1.4,
+            options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
+            self.dagubiVideosLabel.alpha = 1.0
+            self.dagubiVideosMakerLabel.alpha = 1.0
+        }, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

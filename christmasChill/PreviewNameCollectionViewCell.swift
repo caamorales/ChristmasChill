@@ -10,9 +10,10 @@ import UIKit
 
 class PreviewNameCollectionViewCell : UICollectionViewCell {
     
-    @IBOutlet weak var previewTitle: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
     public func configureCell(content : Content) {
 
+        image.image = content.image
     }
 }
